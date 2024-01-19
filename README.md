@@ -41,7 +41,8 @@ sample call:
 output:
 ```
 hash :Odkłamane pohańbiaj załagodzeniom
-entropy :64 
+entropy :64
+strength :strong - use for banks
 ```
 
 sample call:
@@ -49,13 +50,15 @@ sample call:
 output:
 ```
 hash :Pałowań siknęło rolo
-entropy :53 
+entropy :53
+strength :reasonable - for work, social media
 ```
 
 sample call:
 ```python ./hash_phrase.py -d 'password1' -n 3 -l 7```
-output:
+output (please note the small password change generates completely different hash):
 ```
 hash :Nakopią zezna łkasz
-entropy :53 
+entropy :53
+strength :reasonable - for work, social media
 ```

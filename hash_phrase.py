@@ -81,5 +81,18 @@ if __name__ == "__main__":
 
     args = parser.parse_args(sys.argv[1:])
 
+    entropy = hash_entropy(args.num_words,args.max_len)
+    if entropy < 28:
+        strength = 'very weak'
+    elif entropy < 36:
+        strength = 'weak - use for local logging only'
+    elif entropy < 60:
+        strength = 'reasonable - for work, social media'
+    elif entropy < 128:
+        strength = 'strong - use for banks'
+    else:
+        strength = 'very strong - usually overkill'
+    
     print ("hash :"+hash_phrase (args.data, args.num_words, args.max_len))
-    print ("entropy :"+str(hash_entropy(args.num_words,args.max_len)))
+    print ("entropy :"+str(entropy))
+    print ("strength :"+strength)
