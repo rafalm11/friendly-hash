@@ -39,17 +39,23 @@ optional arguments:
 sample call:
 ```python ./hash_phrase.py -d 'password' ```
 output:
-```hash :Odkłamane pohańbiaj załagodzeniom
-entropy :64 ```
+```
+hash :Odkłamane pohańbiaj załagodzeniom
+entropy :64 
+```
 
 sample call:
 ```python ./hash_phrase.py -d 'password' -n 3 -l 7```
 output:
-```hash :Pałowań siknęło rolo
-entropy :53 ```
+```
+hash :Pałowań siknęło rolo
+entropy :53 
+```
 
 sample call:
 ```python ./hash_phrase.py -d 'password1' -n 3 -l 7```
 output:
-```hash :Nakopią zezna łkasz
-entropy :53 ```
+```
+hash :Nakopią zezna łkasz
+entropy :53 
+```
