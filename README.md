@@ -3,19 +3,37 @@
 ## description
 
 Generates human readable hash for a given string.
-Can convert short string to a strong password, for example password with only 3 words has a strength of 64bit hash (with Polish dictionary which contains 3.2mln words), which is considered as a very strong password (stronger than "#;sfżd23*GF)!/ą" !!!!).
+It hashes isput with sha-256 and then transaltes it to human words.
+Can convert short string to a strong password, for example password with only 3 words has a strength of 64bit hash (with Polish dictionary which contains 3.2mln words), which is considered as a very strong password (**stronger than "#;sfżd23*GF)!/ą" !!!!**).
+It uses sha256 hashing.
 
 Works only with Polish words dictionary as for now
 
+### use cases
 
-## credits
-code is based on https://github.com/fpgaminer/hash-phrase
-which was released into the Public Domain by fpgaminer@bitcoin-mining.com
+possible use cases
 
-Słownik SJP.PL - wersja do gier słownych
-Słownik udostępniany na licencjach GPL 2 oraz
-Creative Commons Attribution 4.0 International
-https://sjp.pl
+* strong and easy to remember password generator
+
+  You do not have to trade security for convenience. You can have many passwords both easy to remember and strong.
+  Even if you forget those this passwords - you can always recover them again.
+  
+  For example you convert:
+  
+  ```facebook-<something personal>``` into ```Rozbyczać niezasmażenia kijowa``` (strength 64 bytes)
+  
+  ```gmail-<something personal>``` into ```Niezapłaceniach hangarowych obumierajcież``` (strength 64 bytes)
+  
+  even if you forget both passwords - the only thing you need to remeber is <something personal> to recover them both
+
+
+* convert guids to something readable in your application
+
+    for example in your log file it is easier to visually scan for words
+
+* use words instead of numeric codes for inventory identification
+
+    it is easier to repeat words instead of long numbers (especially over the phone)
 
 
 ## use synatax
@@ -62,3 +80,12 @@ hash :Nakopią zezna łkasz
 entropy :53
 strength :reasonable - for work, social media
 ```
+
+## credits
+code is based on https://github.com/fpgaminer/hash-phrase
+which was released into the Public Domain by fpgaminer@bitcoin-mining.com
+
+Słownik SJP.PL - wersja do gier słownych
+Słownik udostępniany na licencjach GPL 2 oraz
+Creative Commons Attribution 4.0 International
+https://sjp.pl
